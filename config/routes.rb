@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get 'ranking', to: 'ranking#index'
   get 'ranking/index'
+  get 'ranking/daily'
+  get 'ranking/monthly'
+  get 'ranking/total'
 
   get 'favorite', to: 'favorite#index'
   get 'favorite/index'
