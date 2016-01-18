@@ -4061,6 +4061,15 @@ a.btn:hover {
   background: #007a87;
 }
 
+.intro-fb-button {
+  font-size: 1.5rem;
+  width: 270px;
+  color: #fff !important;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #3b5998;
+}
+
 .ranking-button {
   font-size: 1.5rem;
   display: table-cell;
@@ -4087,6 +4096,9 @@ a.btn:hover {
   position: absolute;
 }
 
+.page-header {
+  border-bottom: 2px solid #FFBDBF;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
