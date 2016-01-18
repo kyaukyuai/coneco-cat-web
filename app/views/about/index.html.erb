@@ -1,24 +1,84 @@
 <section id="ranking" class="home-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12">
-        <div>
-          <h2>cat2.picsとは</h2>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              cat2.picsは、<a href="https://dev.twitter.com/">「Twitter」</a><a href="https://www.instagram.com/developer/">「Instagram」</a><a href="https://www.flickr.com/services/api/">「flickr」</a><a href="http://developers.500px.com/">「500px」</a>が一般公開しているAPIを利用して検索し、独自のアルゴリズムにより魅力的なネコさん達を表示するサイトです。会員登録することでお気に入りの猫をあつめたり、ランキングの投票に参加することが可能です。
+      <div class="text-center">
+        <h2 class="page-header"><B>cat2.picsとは...</B></h2>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            cat2.picsとは、<a href="https://dev.twitter.com/">「Twitter」</a><a href="https://www.instagram.com/developer/">「Instagram」</a><a href="https://www.flickr.com/services/api/">「flickr」</a><a href="http://developers.500px.com/">「500px」</a>が一般公開しているAPIを利用して検索し、独自のアルゴリズムにより魅力的なネコさん達を表示するサイトです。会員登録することでお気に入りの猫をあつめたり、ランキングの投票に参加することが可能です。
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'search.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>1. SEARCH & FUN</h3>
+                <p>まずは探して楽しい！数十万の中からあなたのお気に入りの猫を探そう！毎日更新されるのでいつ見ても楽しいよ♫</p>
+                <p><a href="search" class="btn btn-danger intro-button" role="button">猫をさがす</a></p>
+                <%= link_to "Facebook 登録/ログイン", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
             </div>
           </div>
-          <h2>利用規約・免責事項</h2>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              cat2.pics(以下、「当サイト」と呼びます)の利用者(以下、「ユーザ」と呼びます)は、本サービスを利用することにより、本利用規約の全ての記載内容について同意したものとみなされます。
-              ユーザは、ユーザ自身の自己責任において当サイトを利用するものとし、当サイトを利用してなされた一切の行為及びその結果について一切の責任を負います。
-              ユーザは、サービスを利用したこと、または利用ができなかったこと、ユーザの送信データへの不正アクセスや不正な改変がなされたこと、その他当サイトに関連する事項によって生じた一切の損害について、運営者が賠償責任を負わないことに同意します。
-              当サイトは、<a href="https://dev.twitter.com/">「Twitter」</a><a href="https://www.instagram.com/developer/">「Instagram」</a><a href="https://www.flickr.com/services/api/">「flickr」</a><a href="http://developers.500px.com/">「500px」</a>に投稿されている写真と動画を、掲載元サイトが提供する 一般公開されているAPIを利用して検索し、独自のアルゴリズムを使用して掲載しております。著作権については、載元サイト へお問い合わせください。
-              機械抽出のため、同一の画像が表示されたり、猫以外の画像が表示されることがありますが場合があります。ご了承ください。
-              なお各写真および動画は掲載元サイトのサーバー上にあり、当サイトのサーバーに複製はしておりません。写真および動画の削除については掲載元サイトへお問い合わせください。
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'favorite.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>2. FAVORITE & FUN</h3>
+                <p>つぎに気に入った猫をあつめて楽しい！会員登録するとふぁぼる（お気に入り登録）ことができるよ♫</p>
+                <p><a href="favorite" class="btn btn-danger intro-button" role="button">猫をあつめる</a></p>
+                <%= link_to "Facebook 登録/ログイン", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'ranking.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>3. RANKING & FUN</h3>
+                <p>さいごにあなたのお気に入りの猫をランクインさせて楽しい！日別/月別/年別でランクインさせるように友達にシェアしよう♫</p>
+                <p><a href="ranking" class="btn btn-danger intro-button" role="button">ランキングをみる</a></p>
+                <%= link_to "Facebook 登録/ログイン", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-center">
+        <h2 class="page-header"><B>利用規約/免責事項</B></h2>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            cat2.pics(以下、「当サイト」と呼びます)の利用者(以下、「ユーザ」と呼びます)は、本サービスを利用することにより、本利用規約の全ての記載内容について同意したものとみなされます。
+            ユーザは、ユーザ自身の自己責任において当サイトを利用するものとし、当サイトを利用してなされた一切の行為及びその結果について一切の責任を負います。
+            ユーザは、サービスを利用したこと、または利用ができなかったこと、ユーザの送信データへの不正アクセスや不正な改変がなされたこと、その他当サイトに関連する事項によって生じた一切の損害について、運営者が賠償責任を負わないことに同意します。
+            当サイトは、<a href="https://dev.twitter.com/">「Twitter」</a><a href="https://www.instagram.com/developer/">「Instagram」</a><a href="https://www.flickr.com/services/api/">「flickr」</a><a href="http://developers.500px.com/">「500px」</a>に投稿されている写真と動画を、掲載元サイトが提供する 一般公開されているAPIを利用して検索し、独自のアルゴリズムを使用して掲載しております。著作権については、載元サイト へお問い合わせください。
+            機械抽出のため、同一の画像が表示されたり、猫以外の画像が表示されることがありますが場合があります。ご了承ください。
+            なお各写真および動画は掲載元サイトのサーバー上にあり、当サイトのサーバーに複製はしておりません。写真および動画の削除については掲載元サイトへお問い合わせください。
           </div>
         </div>
       </div>
