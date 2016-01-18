@@ -48,12 +48,12 @@
                 <% if controller.controller_name == 'welcome' %>
                   <li class='active'><a href='#intro'>Top</a></li>
                 <% else %>
-                  <li class='active'><a href='welcome'>Top</a></li>
+                  <li class='active'><a href='/welcome'>Top</a></li>
                 <% end %>
-                <li><a href='search'>Search</a></li>
-                <li><a href='favorite'>Favorite</a></li>
-                <li><a href='ranking'>Ranking</a></li>
-                <li><a href='about'>About</a></li>
+                <li><a href='/search'>Search</a></li>
+                <li><a href='/favorite'>Favorite</a></li>
+                <li><a href='/ranking'>Ranking</a></li>
+                <li><a href='/about'>About</a></li>
                 <% if user_signed_in? %>
                 </li>
                   <%= image_tag current_user.image, :height => '35px', :class => 'img-flickr' %>
