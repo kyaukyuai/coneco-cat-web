@@ -28,69 +28,61 @@
 
 <section id="introduction" class="home-section">
   <div class="container">
+    <div class="text-center">
+      <h1 class="page-header"><B>cat2.picsとは...</B></h1>
+    </div>
     <div class="row">
-      <% if !user_signed_in? %>
-       <div class="col-xs-12 col-sm-12 col-md-3">
-           <div class="text-center">
-            <div class="fb-body-mini">
-            <%= link_to "Sign Up By Facebook", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %>
-            </div>
-            <p>まずはアカウント登録をしよう</p>
-            <div class="fb-body-mini">
-            <%= link_to "Facebook Login", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %>
-            </div>
-            <p>アカウントお持ちの方はログインをしてね</p>
-           </div>
-       </div>
-      <% end %>
-      <% if !user_signed_in? %>
-      <div class="col-xs-12 col-sm-12 col-md-3">
-      <% else %>
       <div class="col-xs-12 col-sm-12 col-md-4">
-      <% end %>
-        <div class="text-center">
-          <div class="thumnail">
-            <%= image_tag 'search.png', :class => 'img-rakuten' %>
-          </div>
-          </br>
-          <div class="caption">
-            <h3>SEARCH & FUN</h3>
-            <p>探して楽しい！数十万の中からあなたのお気に入りの猫ちゃんを探そう！猫ちゃんも毎日更新されるよ。</p>
-            <p><a href="search" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'search.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>1. SEARCH & FUN</h3>
+                <p>まずは探して楽しい！数十万の中からあなたのお気に入りの猫を探そう！毎日更新されるのでいつ見ても楽しいよ♫</p>
+                <p><a href="search" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+                <%= link_to "Facebook Login", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <% if !user_signed_in? %>
-      <div class="col-xs-12 col-sm-12 col-md-3">
-      <% else %>
       <div class="col-xs-12 col-sm-12 col-md-4">
-      <% end %>
-        <div class="text-center">
-          <div class="thumnail">
-            <%= image_tag 'favorite.png', :class => 'img-rakuten' %>
-          </div>
-          </br>
-          <div class="caption">
-            <h3>FAVORITE & FUN</h3>
-            <p>気に入った猫ちゃんをあつめよう。会員登録するとふぁぼる（お気に入り登録）することができるよ。</p>
-            <p><a href="favorite" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'favorite.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>2. FAVORITE & FUN</h3>
+                <p>つぎに気に入った猫をあつめて楽しい！会員登録するとふぁぼる（お気に入り登録）ことができるよ♫</p>
+                <p><a href="favorite" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+                <%= link_to "Facebook Login", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <% if !user_signed_in? %>
-      <div class="col-xs-12 col-sm-12 col-md-3">
-      <% else %>
       <div class="col-xs-12 col-sm-12 col-md-4">
-      <% end %>
-        <div class="text-center">
-          <div class="thumnail">
-            <%= image_tag 'ranking.png', :class => 'img-rakuten' %>
-          </div>
-          </br>
-          <div class="caption">
-            <h3>RANKING & FUN</h3>
-            <p>あなたのお気に入りの猫ちゃんをランクインさせよう。日別/月別/年別でランクさせるようにがんばろう。</p>
-            <p><a href="ranking" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <div class="thumnail">
+                <%= image_tag 'ranking.png', :class => 'img-rakuten' %>
+              </div>
+              </br>
+              <div class="caption">
+                <h3>3. RANKING & FUN</h3>
+                <p>さいごにあなたのお気に入りの猫をランクインさせて楽しい！日別/月別/年別でランクインさせるように友達にシェアしよう♫</p>
+                <p><a href="ranking" class="btn btn-danger intro-button" role="button">Click Me</a></p>
+                <%= link_to "Facebook Login", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,6 +93,9 @@
 
 <section id="ranking" class="home-section">
   <div class="container">
+    <div class="text-center">
+      <h1 class="page-header"><B>本日のランキング</B></h1>
+    </div>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6">
         <div class="text-center">
@@ -150,9 +145,13 @@
     </div>
   </div>
 </section>
+</br>
 
 <section id="douga" class="home-section text-left">
   <div class="container">
+    <div class="text-center">
+      <h1 class="page-header"><B>本日の動画</B></h1>
+    </div>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="align-center txt-shadow text-center">
