@@ -18,7 +18,7 @@ $(function() {
   });
   $(".img-good").on({
     "click":function(){
-      $(this).addClass("animated bounce");
+      $(this).addClass("animated fadeOutUp");
       var that = this;
       var cat_id = $(this).val();
       var good_url = "/api/v1/events/good";
@@ -35,12 +35,11 @@ $(function() {
       });
     },
     "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend":function(){
-      $(this).removeClass("animated bounce");
     }
   });
   $(".img-bad").on({
     "click":function(){
-      $(this).addClass("animated bounce");
+      $(this).addClass("animated fadeOutUp");
       var that = this;
       var cat_id = $(this).val();
       var bad_url = "/api/v1/events/bad";
@@ -57,7 +56,6 @@ $(function() {
       });
     },
     "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend":function(){
-      $(this).removeClass("animated bounce");
     }
   });
 });
