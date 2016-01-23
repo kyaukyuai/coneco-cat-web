@@ -17,6 +17,7 @@ Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( default.css )
 Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+Rails.application.config.assets.precompile += %w( animate.css )
 
 ## JavaScripts
 Rails.application.config.assets.precompile += %w( jquery.min.js )
@@ -44,3 +45,5 @@ Rails.application.config.assets.precompile += %w( favicon.ico )
 Rails.application.config.assets.precompile += %w( search.png )
 Rails.application.config.assets.precompile += %w( favorite.png )
 Rails.application.config.assets.precompile += %w( ranking.png )
+Rails.application.config.assets.precompile += %w( good.png )
+Rails.application.config.assets.precompile += %w( bad.png )

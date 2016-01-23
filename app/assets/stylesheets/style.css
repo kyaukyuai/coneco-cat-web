@@ -846,3 +846,27 @@ a.btn:hover {
 .page-header {
   border-bottom: 2px solid #FFBDBF;
 }
+
+.img-bad {
+  margin-top: -40px;
+  width: 70px;
+  height: 70px;
+  left: 10%;
+  margin-bottom: 50px;
+}
+
+.img-good {
+  margin-top: -40px;
+  width: 70px;
+  height: 70px;
+  right: 10%;
+  margin-bottom: 50px;
+}
+
+.img-favorite {
+  margin-top: -40px;
+  width: 70px;
+  height: 70px;
+  left: 40%;
+  margin-bottom: 50px;
+}

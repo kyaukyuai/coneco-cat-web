@@ -1,14 +1,22 @@
 <% @fav_cats.each do |fav_cat| %>
   <div class="fav col-xs-12 col-sm-12 col-md-4">
     <div class="align-center txt-shadow">
-      <% if user_signed_in? %>
-        <% if @fav_flg[fav_cat.id] %>
-          <button type='submit' class='favorite btn btn-lg' value='<%= fav_cat.id %>' disabled>ふぁぼった</button>
-        <% else %>
-          <button type='submit' class='favorite btn btn-lg btn-favorite' value='<%= fav_cat.id %>'>ふぁぼる</button>
-        <% end %>
-      <% end %>
       <%= link_to image_tag(fav_cat.image_url, :class => 'img-responsive img-round'), fav_cat.link %>
+    </div>
+    <div class="fav col-xs-4 col-sm-4 col-md-4">
+      <%= image_submit_tag 'bad.png', :class => 'img-responsive img-bad', :value => fav_cat.id %>
+    </div>
+    <% if user_signed_in? %>
+      <% if @fav_flg[fav_cat.id] %>
+        <div class="fav col-xs-4 col-sm-4 col-md-4"></div>
+      <% else %>
+        <div class="fav col-xs-4 col-sm-4 col-md-4">
+          <%= image_submit_tag 'favorite.png', :class => 'img-responsive img-favorite', :value => fav_cat.id %>
+        </div>
+      <% end %>
+    <% end %>
+    <div class="fav col-xs-4 col-sm-4 col-md-4">
+      <%= image_submit_tag 'good.png', :class => 'img-responsive img-good', :value => fav_cat.id %>
     </div>
   </div>
 <% end %>

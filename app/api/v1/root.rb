@@ -30,5 +30,6 @@ module V1
 
     mount V1::Cats
     mount V1::Favorites
+    mount V1::Events
   end
 end
