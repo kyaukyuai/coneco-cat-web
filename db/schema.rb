@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112121645) do
+ActiveRecord::Schema.define(version: 20160123091139) do
 
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token", limit: 255
@@ -24,6 +24,28 @@ ActiveRecord::Schema.define(version: 20160112121645) do
 
   add_index "api_keys", ["access_token"], name: "index_api_keys_on_access_token", unique: true, using: :btree
   add_index "api_keys", ["user_id"], name: "index_api_keys_on_user_id", using: :btree
+
+  create_table "cats", force: :cascade do |t|
+    t.integer  "site_id",           limit: 4
+    t.string   "name",              limit: 255
+    t.string   "description",       limit: 255
+    t.binary   "keyword",           limit: 65535
+    t.string   "link_url",          limit: 255
+    t.string   "image_url",         limit: 255
+    t.integer  "userid",            limit: 8
+    t.string   "username",          limit: 255
+    t.string   "userpic_url",       limit: 255
+    t.integer  "fav_count",         limit: 4
+    t.integer  "like_count",        limit: 4
+    t.integer  "comment_count",     limit: 4
+    t.datetime "posted_at"
+    t.datetime "soft_destroyed_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "cats", ["site_id"], name: "index_cats_on_site_id", unique: true, using: :btree
+  add_index "cats", ["soft_destroyed_at"], name: "index_cats_on_soft_destroyed_at", using: :btree
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
