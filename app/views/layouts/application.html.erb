@@ -59,7 +59,7 @@
                   <%= image_tag current_user.image, :height => '35px', :class => 'img-flickr' %>
                 </li>
                 <li>
-                  <p><%= link_to 'Logout', 'logout', :method => :delete %></p>
+                  <p><%= link_to 'Logout', '/logout', :method => :delete %></p>
                 </li>
                 <% else %>
                 <li>
@@ -73,7 +73,7 @@
                           </button>
                         </div><!-- /modal-header -->
                         <div class="modal-body fb-body">
-                          <%= link_to "Sign Up By Facebook", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %></br>
+                          <%= link_to "Sign Up By Facebook", %Q{/api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %></br>
                           登録ボタンをクリックすると、cat2.picsのサービス利用規約に同意したことになります。
                         </div>
                         <div class="modal-footer">
@@ -94,7 +94,7 @@
                           </button>
                         </div><!-- /modal-header -->
                         <div class="modal-body fb-body">
-                          <%= link_to "Facebook Login", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %>
+                          <%= link_to "Facebook Login", %Q{/api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-info fb' %>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
