@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123102940) do
+ActiveRecord::Schema.define(version: 20160123134901) do
 
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token", limit: 255
@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 20160123102940) do
   create_table "cats", force: :cascade do |t|
     t.integer  "site_id",           limit: 4
     t.string   "name",              limit: 255
-    t.string   "description",       limit: 255
+    t.binary   "description",       limit: 65535
     t.binary   "keyword",           limit: 65535
-    t.string   "link_url",          limit: 255
-    t.string   "image_url",         limit: 255
+    t.binary   "link_url",          limit: 65535
+    t.binary   "image_url",         limit: 65535
     t.integer  "userid",            limit: 8
     t.string   "username",          limit: 255
-    t.string   "userpic_url",       limit: 255
+    t.binary   "userpic_url",       limit: 65535
     t.integer  "fav_count",         limit: 4,     default: 0
     t.integer  "like_count",        limit: 4
     t.integer  "comment_count",     limit: 4
