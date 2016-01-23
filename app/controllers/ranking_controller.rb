@@ -2,7 +2,7 @@ class RankingController < ApplicationController
 
   def index
     authenticate_user
-    selected_date = Date.today
+    selected_date = Date.today - 1
     @fav_cats = InstagramCat.without_soft_destroyed.order(fav_count: :desc).where(:posted_at => selected_date.beginning_of_day..selected_date.end_of_day).page(1).per(30)
     if user_signed_in?
       @profile = @current_user.image
@@ -15,7 +15,7 @@ class RankingController < ApplicationController
 
   def daily
     authenticate_user
-    selected_date = Date.today
+    selected_date = Date.today - 1
     @fav_cats = InstagramCat.without_soft_destroyed.order(fav_count: :desc).where(:posted_at => selected_date.beginning_of_day..selected_date.end_of_day).page(1).per(30)
     if user_signed_in?
       @profile = @current_user.image
