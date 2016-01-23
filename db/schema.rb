@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123091139) do
+ActiveRecord::Schema.define(version: 20160123102940) do
 
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token", limit: 255
@@ -35,13 +35,13 @@ ActiveRecord::Schema.define(version: 20160123091139) do
     t.integer  "userid",            limit: 8
     t.string   "username",          limit: 255
     t.string   "userpic_url",       limit: 255
-    t.integer  "fav_count",         limit: 4
+    t.integer  "fav_count",         limit: 4,     default: 0
     t.integer  "like_count",        limit: 4
     t.integer  "comment_count",     limit: 4
     t.datetime "posted_at"
     t.datetime "soft_destroyed_at"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   add_index "cats", ["site_id"], name: "index_cats_on_site_id", unique: true, using: :btree
