@@ -1,0 +1,29 @@
+<section id="cat" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-danger">
+          <div class="panel-body">
+            <div class="col-xs-12 col-sm-12 col-md-8">
+              <div class="align-center txt-shadow">
+                <%= link_to image_tag(@cat[:image_url], :class => 'img-responsive img-round'), @cat[:link] %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <div class="fav col-xs-4 col-sm-4 col-md-4">
+                <%= image_submit_tag 'bad.png', :class => 'img-responsive img-bad-cat', :value => @cat.id %>
+              </div>
+              <div class="fav col-xs-4 col-sm-4 col-md-4">
+                <%= image_submit_tag 'favorite.png', :class => 'img-responsive img-favorite-cat', :value => @cat.id %>
+              </div>
+              <div class="fav col-xs-4 col-sm-4 col-md-4">
+                <%= image_submit_tag 'good.png', :class => 'img-responsive img-good-cat', :value => @cat.id %>
+              </div>
+            </div>
+            <%= @cat.fav_count %>人がこの猫をふぁぼっています。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

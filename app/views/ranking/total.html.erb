@@ -13,7 +13,7 @@
             <div class="panel-body">
               <div class="align-center txt-shadow">
                 <p class='text-under-ranking'><B>ふぁぼランキング<%= (@page - 1) * 30 + index + 1 %>位</B></p>
-                <%= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), fav_cat[:link] %>
+                <%= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), cat_path(fav_cat.id) %>
               </div>
               <div class="fav col-xs-4 col-sm-4 col-md-4">
                 <%= image_submit_tag 'bad.png', :class => 'img-responsive img-bad', :value => fav_cat.id %>

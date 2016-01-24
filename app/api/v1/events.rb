@@ -8,9 +8,7 @@ module V1
       end
       post 'good' do
         authenticate_user!
-        p params[:cat_id]
         cat = InstagramCat.find(params[:cat_id])
-        p cat
         cat[:fav_count] += 1
         cat.save!
         status 201

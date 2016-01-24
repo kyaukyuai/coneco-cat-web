@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :cat do
+  end
+
   get 'ranking', to: 'ranking#index'
   get 'ranking/index'
   get 'ranking/daily'
@@ -23,12 +26,6 @@ Rails.application.routes.draw do
 
   # For APIs
   Rails.application.routes.draw do
-  get 'ranking/index'
-
-  get 'favorite/index'
-
-  get 'search/index'
-
     mount API => '/'
   end
 

@@ -103,7 +103,7 @@
             <div class="text-center">
               <% if @fav_cats.count > 0 %>
                 <p class='text-ranking text-light-black'><B>ふぁぼランキング1位</B></p>
-                <%= link_to image_tag(@fav_cats[0].image_url, :class => 'img-responsive img-round'), @fav_cats[0].link %>
+                <%= link_to image_tag(@fav_cats[0].image_url, :class => 'img-responsive img-round'), cat_path(@fav_cats[0].id) %>
               <% end %>
             </div>
           </div>
@@ -115,7 +115,7 @@
             <div class="text-center">
               <% if @fav_cats.count > 1 %>
                 <p class='text-ranking text-light-black'><B>ふぁぼランキング2位</B></p>
-                <%= link_to image_tag(@fav_cats[1].image_url, :class => 'img-responsive img-round'), @fav_cats[1].link %>
+                <%= link_to image_tag(@fav_cats[1].image_url, :class => 'img-responsive img-round'), cat_path(@fav_cats[1].id) %>
               <% end %>
             </div>
           </div>
@@ -131,7 +131,7 @@
             <div class="panel-body">
               <div class="align-center txt-shadow text-center">
                 <p class='text-under-ranking text-light-black'><B>ふぁぼランキング3位</B></p>
-                <%= link_to image_tag(@fav_cats[2].image_url, :class => 'img-responsive img-round'), @fav_cats[2].link %>
+                <%= link_to image_tag(@fav_cats[2].image_url, :class => 'img-responsive img-round'), cat_path(@fav_cats[2].id) %>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
             <div class="panel-body">
               <div class="align-center txt-shadow text-center">
                 <p class='text-under-ranking text-light-black'><B>ふぁぼランキング4位</B></p>
-                <%= link_to image_tag(@fav_cats[3].image_url, :class => 'img-responsive img-round'), @fav_cats[3].link %>
+                <%= link_to image_tag(@fav_cats[3].image_url, :class => 'img-responsive img-round'), cat_path(@fav_cats[3].id) %>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@
             <div class="panel-body">
               <div class="align-center txt-shadow text-center">
                 <p class='text-under-ranking text-light-black'><B>ふぁぼランキング5位</B></p>
-                <%= link_to image_tag(@fav_cats[4].image_url, :class => 'img-responsive img-round'), @fav_cats[4].link %>
+                <%= link_to image_tag(@fav_cats[4].image_url, :class => 'img-responsive img-round'), cat_path(@fav_cats[4].id) %>
               </div>
             </div>
           </div>
