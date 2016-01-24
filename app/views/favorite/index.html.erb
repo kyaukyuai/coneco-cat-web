@@ -1,12 +1,26 @@
 <section id="favorite" class="home-section">
   <div class="container">
-    <p class='text-ranking'><B>お気に入りの子達</B></p>
+    <p class='text-ranking'><B>お気に入りの猫たち</B></p>
+    <% if user_signed_in? %>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-danger">
+          <div class="panel-body">
+            今までにふぁぼった（お気に入り登録）した猫たちが大集合。</br>
+            眺めて癒やされよう。
+          </div>
+        </div>
+      </div>
+    <% end %>
     <% if user_signed_in? %>
       <div class="row">
         <% @fav_cats.each_with_index do |fav_cat, index| %>
           <div class="col-xs-12 col-sm-12 col-md-4">
-            <div class="align-center txt-shadow">
-              <%= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), fav_cat[:link] %>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="align-center txt-shadow">
+                  <%= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), fav_cat[:link] %>
+                </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -14,7 +28,8 @@
     <% else %>
       <div class="panel panel-default">
         <div class="panel-body">
-          会員登録することで発見した猫さん達をふぁぼる（お気に入り登録）することができます。
+          会員登録することで発見した猫たちをふぁぼる（お気に入り登録する）ことができるよ。</br>
+          <%= link_to "Facebook 登録/ログイン", %Q{api/v1/auth/facebook?auth_origin_url=#{Settings.base_url}/login}, :class => 'btn btn-danger intro-fb-button' %>
         </div>
       </div>
     <% end %>
