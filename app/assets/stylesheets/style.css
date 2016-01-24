@@ -882,3 +882,13 @@ a.btn:hover {
 .page-header {
   border-bottom: 2px solid #FFBDBF;
 }
+
+.footer {
+  background-color: #2b2d2e !important;
+  height: 200px;
+}
+
+.img-cat {
+  right: 10%;
+  position: absolute;
+}
