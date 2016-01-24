@@ -111,6 +111,27 @@ img.img-responsive {
   padding: 15px;
 }
 
+.img-bad {
+  width: 70px;
+  height: 70px;
+  left: 10%;
+  margin-bottom: 10px;
+}
+
+.img-good {
+  width: 70px;
+  height: 70px;
+  right: 10%;
+  margin-bottom: 10px;
+}
+
+.img-favorite {
+  width: 70px;
+  height: 70px;
+  left: 40%;
+  margin-bottom: 10px;
+}
+
 /* ------- Navigation ------------ */
 #navigation {
   background: #fff;
@@ -784,6 +805,21 @@ a.btn:hover {
   .introduction {
     width: 280px;
   }
+
+  .img-bad {
+    width: 50px;
+    height: 50px;
+  }
+
+  .img-good {
+    width: 50px;
+    height: 50px;
+  }
+
+  .img-favorite {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* ==== Facebok ==== */
@@ -846,28 +882,4 @@ a.btn:hover {
 
 .page-header {
   border-bottom: 2px solid #FFBDBF;
-}
-
-.img-bad {
-  margin-top: -40px;
-  width: 70px;
-  height: 70px;
-  left: 10%;
-  margin-bottom: 50px;
-}
-
-.img-good {
-  margin-top: -40px;
-  width: 70px;
-  height: 70px;
-  right: 10%;
-  margin-bottom: 50px;
-}
-
-.img-favorite {
-  margin-top: -40px;
-  width: 70px;
-  height: 70px;
-  left: 40%;
-  margin-bottom: 50px;
 }
