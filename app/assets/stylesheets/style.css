@@ -892,3 +892,8 @@ a.btn:hover {
   right: 10%;
   position: absolute;
 }
+
+.breadcrumb {
+  background-color: #fff;
+  text: bold;
+}

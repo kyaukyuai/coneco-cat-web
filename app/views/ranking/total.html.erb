@@ -2,9 +2,9 @@
   <div class="container">
     <p class='text-ranking'><B>人気な猫たち TOP<%= ((@page - 1) * 30) + 1 %>~<%= @page * 30 %></B></p>
     <ol class="breadcrumb">
-      <li><a href="/ranking/daily">Daily</a></li>
-      <li><a href="/ranking/monthly">Monthly</a></li>
-      <li class="active">Total</li>
+      <li><a href="/ranking/daily"><B>日別</B></a></li>
+      <li><a href="/ranking/monthly"><B>月別</B></a></li>
+      <li class="active"><B>総合</B></li>
     </ol>
     <div class="row">
       <% @fav_cats.each_with_index do |fav_cat, index| %>

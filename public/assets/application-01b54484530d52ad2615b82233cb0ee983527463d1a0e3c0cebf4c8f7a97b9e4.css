@@ -4741,6 +4741,11 @@ a.btn:hover {
   right: 10%;
   position: absolute;
 }
+
+.breadcrumb {
+  background-color: #fff;
+  text: bold;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
