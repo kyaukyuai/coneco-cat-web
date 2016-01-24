@@ -26,6 +26,8 @@
                     <%= image_submit_tag 'favorite.png', :class => 'img-responsive img-favorite', :value => fav_cat.id %>
                   </div>
                 <% end %>
+              <% else %>
+                <div class="fav col-xs-4 col-sm-4 col-md-4"></div>
               <% end %>
               <div class="fav col-xs-4 col-sm-4 col-md-4">
                 <%= image_submit_tag 'good.png', :class => 'img-responsive img-good', :value => fav_cat.id %>
