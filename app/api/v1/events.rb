@@ -7,7 +7,6 @@ module V1
         requires :cat_id, type: Integer, desc: 'Cat ID'
       end
       post 'good' do
-        authenticate_user!
         cat = InstagramCat.find(params[:cat_id])
         cat[:fav_count] += 1
         cat.save!
@@ -19,7 +18,6 @@ module V1
         requires :cat_id, type: Integer, desc: 'Cat ID'
       end
       post 'bad' do
-        authenticate_user!
         cat = InstagramCat.find(params[:cat_id])
         cat[:fav_count] -= 1
         cat.save!
