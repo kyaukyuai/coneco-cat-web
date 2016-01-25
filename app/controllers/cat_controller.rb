@@ -7,6 +7,8 @@ class CatController < ApplicationController
     @cat = InstagramCat.find(params[:id])
     if user_signed_in?
       @profile = @current_user.image
+      @fav_flg = {}
+      @fav_flg[@cat[:id]] = Favorite.exists?(:cat_id => @cat[:id], :user_id => @current_user.id)
     end
   end
 end

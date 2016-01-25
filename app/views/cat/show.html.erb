@@ -13,9 +13,17 @@
               <div class="fav col-xs-4 col-sm-4 col-md-4">
                 <%= image_submit_tag 'bad.png', :class => 'img-responsive img-bad-cat', :value => @cat.id %>
               </div>
-              <div class="fav col-xs-4 col-sm-4 col-md-4">
-                <%= image_submit_tag 'favorite.png', :class => 'img-responsive img-favorite-cat', :value => @cat.id %>
-              </div>
+              <% if user_signed_in? %>
+                <% if @fav_flg[@cat.id] %>
+                  <div class="fav col-xs-4 col-sm-4 col-md-4"></div>
+                <% else %>
+                  <div class="fav col-xs-4 col-sm-4 col-md-4">
+                    <%= image_submit_tag 'favorite.png', :class => 'img-responsive img-favorite-cat', :value => @cat.id %>
+                  </div>
+                <% end %>
+              <% else %>
+                <div class="fav col-xs-4 col-sm-4 col-md-4"></div>
+              <% end %>
               <div class="fav col-xs-4 col-sm-4 col-md-4">
                 <%= image_submit_tag 'good.png', :class => 'img-responsive img-good-cat', :value => @cat.id %>
               </div>
