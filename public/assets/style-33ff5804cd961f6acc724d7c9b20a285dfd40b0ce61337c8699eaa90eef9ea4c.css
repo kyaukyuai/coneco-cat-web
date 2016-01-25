@@ -898,3 +898,8 @@ a.btn:hover {
   background-color: #fff;
   text: bold;
 }
+
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+}

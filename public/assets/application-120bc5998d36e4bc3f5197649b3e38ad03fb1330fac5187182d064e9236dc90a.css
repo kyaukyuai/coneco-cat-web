@@ -4746,6 +4746,11 @@ a.btn:hover {
   background-color: #fff;
   text: bold;
 }
+
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
