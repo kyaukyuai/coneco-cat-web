@@ -10,7 +10,9 @@ module V1
         cat = InstagramCat.find(params[:cat_id])
         cat[:fav_count] += 1
         cat.save!
-        status 201
+        cat[:text].force_encoding('UTF-8')
+        cat[:tags].force_encoding('UTF-8')
+        cat
       end
 
       desc 'Bad cat.'
@@ -21,7 +23,9 @@ module V1
         cat = InstagramCat.find(params[:cat_id])
         cat[:fav_count] -= 1
         cat.save!
-        status 201
+        cat[:text].force_encoding('UTF-8')
+        cat[:tags].force_encoding('UTF-8')
+        cat
       end
 
     end

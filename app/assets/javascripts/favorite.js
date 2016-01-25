@@ -87,7 +87,8 @@ $(function() {
         dataType: 'jsonp',
         data: {cat_id: cat_id},
         timeout: 10000,
-        success: function() {
+        success: function(data) {
+          $("p.fav-count").text(data.fav_count + "人がこの猫をふぁぼっています。");
         },
         error: function() {
         }
@@ -109,7 +110,8 @@ $(function() {
         dataType: 'jsonp',
         data: {cat_id: cat_id},
         timeout: 10000,
-        success: function() {
+        success: function(data) {
+          $("p.fav-count").text(data.fav_count + "人がこの猫をふぁぼっています。");
         },
         error: function() {
         }
