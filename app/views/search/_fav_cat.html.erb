@@ -1,6 +1,6 @@
 <% @fav_cats.each do |fav_cat| %>
   <div class="fav col-xs-12 col-sm-12 col-md-4">
-    <div class="panel panel-danger">
+    <div class="panel panel-default">
       <div class="panel-body">
         <div class="align-center txt-shadow">
           <%= link_to image_tag(fav_cat.image_url, :class => 'img-responsive img-round'), cat_path(fav_cat.id) %>

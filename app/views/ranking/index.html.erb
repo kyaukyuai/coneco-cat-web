@@ -3,13 +3,13 @@
     <p class='text-ranking'><B>人気な猫たち TOP<%= ((@page - 1) * 30) + 1 %>~<%= @page * 30 %></B></p>
     <ol class="breadcrumb">
       <li class="active"><B>日別</B></li>
-      <li><a href="/ranking/monthly"><B>月別</B></a></li>
-      <li><a href="/ranking/total"><B>総合</B></a></li>
+      <li><a class='link' href="/ranking/monthly"><B>月別</B></a></li>
+      <li><a class='link' href="/ranking/total"><B>総合</B></a></li>
     </ol>
     <div class="row">
       <% @fav_cats.each_with_index do |fav_cat, index| %>
         <div class="col-xs-12 col-sm-12 col-md-4">
-          <div class="panel panel-danger">
+          <div class="panel panel-default">
             <div class="panel-body">
               <div class="align-center txt-shadow">
                 <p class='text-under-ranking'><B>ふぁぼランキング<%= (@page - 1) * 30 + index + 1 %>位</B></p>
