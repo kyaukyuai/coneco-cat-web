@@ -867,6 +867,10 @@ a.btn:hover {
     border-radius: 5px;
     background: #3b5998;
   }
+
+  .other {
+    font-size: 20px;
+  }
 }
 
 /* ==== Facebok ==== */
