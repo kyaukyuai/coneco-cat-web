@@ -141,13 +141,31 @@ img.img-responsive {
   margin-bottom: 10px;
 }
 
+.intro-button {
+  font-size: 1.5rem;
+  width: 270px;
+  color: #fff !important;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #f7882f;
+}
+
+.intro-fb-button {
+  font-size: 1.5rem;
+  width: 270px;
+  color: #fff !important;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #3b5998;
+}
+
 /* ------- Navigation ------------ */
 #navigation {
   background: #dcc7aa;
   z-index: 9999;
   width:100%;
   box-sizing:border-box;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #6b7a8f;
   box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 0 auto;
@@ -387,7 +405,7 @@ hr {
 
 .img-flickr {
   border-radius: 50%;
-  border: 3px solid #f7c331;
+  border: 3px solid #6b7a8f;
 }
 
 .img-round {
@@ -741,10 +759,10 @@ a.btn:hover {
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #28c3ab;
+    border: 1px solid #6b7a8f;
     outline: 0;
     color: #000;
-    background-color: #28c3ab;
+    background-color: #6b7a8f;
 }
 
 .btn-huge {
@@ -831,6 +849,24 @@ a.btn:hover {
     width: 50px;
     height: 50px;
   }
+
+  .intro-button {
+    font-size: 1.5rem;
+    width: 250px;
+    color: #fff !important;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #f7882f;
+  }
+
+  .intro-fb-button {
+    font-size: 1.5rem;
+    width: 250px;
+    color: #fff !important;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #3b5998;
+  }
 }
 
 /* ==== Facebok ==== */
@@ -841,24 +877,6 @@ a.btn:hover {
   width: 270px;
   height: 65px;
   vertical-align: middle;
-  color: #fff !important;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background: #3b5998;
-}
-
-.intro-button {
-  font-size: 1.5rem;
-  width: 270px;
-  color: #fff !important;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background: #f7882f;
-}
-
-.intro-fb-button {
-  font-size: 1.5rem;
-  width: 270px;
   color: #fff !important;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -925,4 +943,8 @@ a.btn:hover {
 
 .panel-body {
   color: #444;
+}
+
+.modal-content {
+  background-color: #dcc7aa;
 }
