@@ -13526,8 +13526,8 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
 jQuery(function($){
   $("img.lazy").lazyload({
     effect: 'fadeIn',
-    effectspeed: 5000,
-    threshold: 0
+    effectspeed: 1500,
+    threshold: 300
   });
 });
 (function ($) {
