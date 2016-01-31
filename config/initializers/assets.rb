@@ -38,6 +38,8 @@ Rails.application.config.assets.precompile += %w( favorite.js )
 Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( jquery.infinitescroll.js )
 Rails.application.config.assets.precompile += %w( remodal.js )
+Rails.application.config.assets.precompile += %w( jquery.lazyload.min.js )
+Rails.application.config.assets.precompile += %w( cat.js )
 
 ## Images
 Rails.application.config.assets.precompile += %w( cat2.pics-logo.png )

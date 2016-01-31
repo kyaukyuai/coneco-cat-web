@@ -18,7 +18,8 @@
             <div class="panel panel-default">
               <div class="panel-body">
                 <div class="align-center txt-shadow">
-                  <%= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), cat_path(fav_cat.id) %>
+                  <a href="<%= cat_path(fav_cat.id) %>"><img class="lazy img-responsive img-round" src="/images/dummy.gif" alt="cat" data-original="<%= fav_cat[:image_url] %>"></a>
+                  <%#= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), cat_path(fav_cat.id) %>
                 </div>
               </div>
             </div>
