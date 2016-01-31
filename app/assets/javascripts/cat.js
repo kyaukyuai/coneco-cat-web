@@ -1,7 +1,7 @@
 jQuery(function($){
   $("img.lazy").lazyload({
     effect: 'fadeIn',
-    effectspeed: 5000,
+    effectspeed: 3000,
     threshold: 0
   });
 });
