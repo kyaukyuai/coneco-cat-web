@@ -10,7 +10,7 @@ class RankingController < ApplicationController
                   .order(fav_count: :desc)
                   .where(:posted_at => selected_date.beginning_of_day..selected_date.end_of_day)
                   .page(@page)
-                  .per(30)
+                  .per(15)
 
     if user_signed_in?
       @profile = @current_user.image
@@ -26,7 +26,7 @@ class RankingController < ApplicationController
                   .order(fav_count: :desc)
                   .where(:posted_at => selected_date.beginning_of_day..selected_date.end_of_day)
                   .page(@page)
-                  .per(30)
+                  .per(15)
 
     if user_signed_in?
       @profile = @current_user.image
@@ -45,7 +45,7 @@ class RankingController < ApplicationController
                   .order(fav_count: :desc)
                   .where(:posted_at => start_date..end_date)
                   .page(@page)
-                  .per(30)
+                  .per(15)
 
     if user_signed_in?
       @profile = @current_user.image
@@ -59,7 +59,7 @@ class RankingController < ApplicationController
                   .without_soft_destroyed
                   .order(fav_count: :desc)
                   .page(@page)
-                  .per(30)
+                  .per(15)
 
     if user_signed_in?
       @profile = @current_user.image
