@@ -1,6 +1,6 @@
 <section id="ranking" class="home-section">
   <div class="container">
-    <p class='text-ranking'><B>人気な猫たち TOP<%= ((@page - 1) * 30) + 1 %>~<%= @page * 30 %></B></p>
+    <p class='text-ranking'><B>人気な猫たち TOP<%= ((@page - 1) * 15) + 1 %>~<%= @page * 15 %></B></p>
     <ol class="breadcrumb">
       <li><a class='link' href="/ranking/daily"><B>日別</B></a></li>
       <li><a class='link' href="/ranking/monthly"><B>月別</B></a></li>
@@ -12,7 +12,7 @@
           <div class="panel panel-default">
             <div class="panel-body">
               <div class="align-center txt-shadow">
-                <p class='text-under-ranking'><B>ふぁぼランキング<%= (@page - 1) * 30 + index + 1 %>位</B></p>
+                <p class='text-under-ranking'><B>ふぁぼランキング<%= (@page - 1) * 15 + index + 1 %>位</B></p>
                 <a href="<%= cat_path(fav_cat.id) %>"><img class="lazy img-responsive img-round" src="/images/dummy.gif" alt="cat" data-original="<%= fav_cat[:image_url] %>"></a>
                 <%#= link_to image_tag(fav_cat[:image_url], :class => 'img-responsive img-round'), cat_path(fav_cat.id) %>
               </div>

@@ -455,6 +455,11 @@ hr {
   color: #444;
 }
 
+.text-title {
+  font-size: 40px;
+  color: #444;
+}
+
 .text-under-ranking {
   font-size: 20px;
 }
@@ -807,11 +812,15 @@ a.btn:hover {
   }
 
   .text-jumbo {
-    font-size: 33px;
+    font-size: 35px;
   }
 
   .text-ranking {
     font-size: 25px;
+  }
+
+  .text-title {
+    font-size: 30px;
   }
 
   .space-1 {
