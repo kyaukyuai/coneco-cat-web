@@ -4008,6 +4008,11 @@ img.img-responsive {
   background: #3b5998;
 }
 
+.text-title {
+  font-size: 40px;
+  color: #444;
+}
+
 /* ------- Navigation ------------ */
 #navigation {
   background: #dcc7aa;
@@ -4309,7 +4314,7 @@ hr {
 }
 
 .text-medium {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .space-1 {
@@ -4656,11 +4661,15 @@ a.btn:hover {
   }
 
   .text-jumbo {
-    font-size: 33px;
+    font-size: 35px;
   }
 
   .text-ranking {
     font-size: 25px;
+  }
+
+  .text-title {
+    font-size: 30px;
   }
 
   .space-1 {
@@ -4719,6 +4728,10 @@ a.btn:hover {
 
   .other {
     font-size: 20px;
+  }
+
+  .text-medium {
+    font-size: 18px;
   }
 }
 
